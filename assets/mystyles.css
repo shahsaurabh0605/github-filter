@@ -14,10 +14,36 @@
     display: block;
     border-radius: 50%;
     position: relative;
-    left: 69px;
+    left: 82px;
     right: 0;
     top: 0;
     bottom: 0;
     width: 40%;
     padding: 10px 10px 10px 10px;
+}
+
+.username{
+    position: relative;
+    text-overflow:ellipsis;
+    white-space: nowrap; 
+    overflow: hidden; 
+    width: 238.828px;
+    padding-left: 52px;
+    font-family: Lato Regular;
+    font-size: large;
+    text-align: center;
+}
+
+.card .card-content p{
+    color: #777;
+}
+
+.card .card-action{
+    padding: 18px 32px 0.2px 66px;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;  
 }
