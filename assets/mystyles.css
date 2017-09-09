@@ -27,7 +27,7 @@
     text-overflow:ellipsis;
     white-space: nowrap; 
     overflow: hidden; 
-    width: 238.828px;
+    width: 288.828px;
     padding-left: 52px;
     font-family: Lato Regular;
     font-size: large;
@@ -39,7 +39,10 @@
 }
 
 .card .card-action{
-    padding: 18px 32px 0.2px 66px;
+    /*padding: 12px 0px 0.2px 18px;*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .container{
@@ -47,3 +50,5 @@
   flex-direction: row;
   flex-wrap: wrap;  
 }
+
+
