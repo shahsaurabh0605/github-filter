@@ -9,3 +9,15 @@
     height: 100px;
     margin: auto;
 }
+
+.card .card-image img {
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    left: 69px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 40%;
+    padding: 10px 10px 10px 10px;
+}

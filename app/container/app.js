@@ -21,7 +21,7 @@ class App extends Component {
 		return this.state.info.length ?
 			(<ul className="collection"> {this.state.info.map(function (item, i) {
 				return (
-							<Repositories key = {i} name = {item.name} description = {item.description} language = {item.language} stars = {item.stargazers_count} forks = {item.forks}/>	
+							<Repositories key = {i} name = {item.name} description = {item.description} language = {item.language} stars = {item.stargazers_count} forks = {item.forks} avatar = {item.owner.avatar_url}/>	
 					)
 				})
 				 }
