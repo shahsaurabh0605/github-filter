@@ -6,9 +6,9 @@ import Repositories from "./../components/repositories"
 class App extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { 
+		this.state = {
 			info: [],
-		  }
+		}
 	}
 
 	componentDidMount() {
@@ -19,13 +19,19 @@ class App extends Component {
 
 	render() {
 		return this.state.info.length ?
-			(<ul className="collection row"> {this.state.info.map(function (item, i) {
-				return (
-							<Repositories key = {i} name = {item.full_name} description = {item.description} language = {item.language} stars = {item.stargazers_count} forks = {item.forks} avatar = {item.owner.avatar_url}/>	
-					)
-				})
-				 }
-			</ul>) 
+			<div className="row">
+				<div className="col s3">
+				</div>
+				<div className="col s9">
+					<ul className="row"> {this.state.info.map(function (item, i) {
+						return (
+							<Repositories key={i} name={item.full_name} description={item.description} language={item.language} stars={item.stargazers_count} forks={item.forks} avatar={item.owner.avatar_url} />
+						)
+					})
+					}
+					</ul>
+				</div>
+			</div>
 			:
 			(
 				<div className="loading">

@@ -28,7 +28,7 @@
     white-space: nowrap; 
     overflow: hidden; 
     width: 288.828px;
-    padding-left: 52px;
+    padding-left: 10px;
     font-family: Lato Regular;
     font-size: large;
     text-align: center;
@@ -36,6 +36,13 @@
 
 .card .card-content p{
     color: #777;
+    text-overflow:ellipsis;
+    white-space: nowrap; 
+    overflow: hidden;
+}
+
+.card .card-content{
+    height: 60px;
 }
 
 .card .card-action{
