@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Data from "./../services/github_api";
-import Repositories from "./../components/repositories"
+import _ from 'lodash';
+import Repositories from "./../components/repositories";
 //import {Loading} from "./../components/loading"
 
 class App extends Component {
@@ -9,6 +10,7 @@ class App extends Component {
 		this.state = {
 			info: [],
 		}
+		this.gotoUrl = this.gotoUrl.bind(this);
 	}
 
 	componentDidMount() {
@@ -17,7 +19,13 @@ class App extends Component {
 		})
 	}
 
+	gotoUrl(url) {
+		console.log("in goto url");
+		window.open(url);
+	}
+
 	render() {
+		const that = this;
 		return this.state.info.length ?
 			<div className="row">
 				<div className="col s3">
@@ -25,7 +33,9 @@ class App extends Component {
 				<div className="col s9">
 					<ul className="row"> {this.state.info.map(function (item, i) {
 						return (
+							<div onClick={_.partial(that.gotoUrl, item.html_url)}>
 							<Repositories key={i} name={item.full_name} description={item.description} language={item.language} stars={item.stargazers_count} forks={item.forks} avatar={item.owner.avatar_url} />
+							</div>
 						)
 					})
 					}
