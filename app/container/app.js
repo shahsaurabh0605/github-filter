@@ -9,8 +9,8 @@ const cursorStyle = {
 	cursor: 'pointer'
 }
 
-const filterStyle = {
-	margin: "20px 20px 20px 80px"
+const bodyStyle = {
+	margin: "20px 50px 20px 50px"
 }
 
 class App extends Component {
@@ -36,8 +36,8 @@ class App extends Component {
 	render() {
 		const that = this;
 		return this.state.info.length ?
-			<div className="row">
-				<div className="col s2" style={filterStyle}>
+			<div className="row" style={bodyStyle}>
+				<div className="col s3">
 					
 					<div className="row">
 						<h1>Filters</h1>
@@ -53,7 +53,7 @@ class App extends Component {
 					</div>
 					
 				</div>
-				<div className="col s8">
+				<div className="col s9">
 					<ul className="row"> {this.state.info.map(function (item, i) {
 						return (
 							<div onClick={_.partial(that.gotoUrl, item.html_url)} style={cursorStyle}>
